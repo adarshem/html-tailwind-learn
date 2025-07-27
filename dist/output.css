@@ -211,9 +211,6 @@
   .bg-blue-100 {
     background-color: var(--color-blue-100);
   }
-  .bg-white {
-    background-color: var(--color-white);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -245,12 +242,6 @@
   .text-blue-900 {
     color: var(--color-blue-900);
   }
-  .text-gray-600 {
-    color: var(--color-gray-600);
-  }
-  .text-gray-900 {
-    color: var(--color-gray-900);
-  }
   .shadow-xl {
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -277,21 +268,30 @@
       }
     }
   }
-  .dark\:bg-gray-800 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-gray-800);
-    }
-  }
-  .dark\:text-gray-100 {
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-gray-100);
-    }
-  }
-  .dark\:text-gray-300 {
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-gray-300);
-    }
-  }
+}
+:root {
+  --theme-bg-primary: #f3f4f6;
+  --theme-bg-secondary: #ffffff;
+  --theme-text-primary: #1f2937;
+  --theme-text-secondary: #6b7280;
+}
+.dark {
+  --theme-bg-primary: #1f2937;
+  --theme-bg-secondary: #374151;
+  --theme-text-primary: #ffffff;
+  --theme-text-secondary: #d1d5db;
+}
+body {
+  background-color: var(--theme-bg-primary);
+}
+.card {
+  background-color: var(--theme-bg-secondary);
+}
+.text-primary {
+  color: var(--theme-text-primary);
+}
+.text-secondary {
+  color: var(--theme-text-secondary);
 }
 @property --tw-font-weight {
   syntax: "*";
